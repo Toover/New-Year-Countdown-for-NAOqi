@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<package version="0.0.1" uuid="new-year-countdown">
+ <names>
+  <name lang="en_US">New Year Countdown</name>
+  <name lang="fr_FR">Compte à Rebours du Nouvel An</name>
+ </names>
+ <supportedLanguages>
+  <language>fr_FR</language>
+  <language>en_US</language>
+ </supportedLanguages>
+ <descriptionLanguages>
+  <language>fr_FR</language>
+  <language>en_US</language>
+ </descriptionLanguages>
+ <contents>
+  <behaviorContent path="Announce Time Left">
+   <userRequestable/>
+   <nature>interactive</nature>
+   <names>
+    <name lang="en_US">Time Left before New Year</name>
+    <name lang="fr_FR">Temps restant avant le nouvel an</name>
+   </names>
+   <triggerSentences>
+    <sentence lang="en_US">How long before next year</sentence>
+    <sentence lang="en_US">When is the next year</sentence>
+    <sentence lang="en_US">How long before the new year</sentence>
+    <sentence lang="en_US">When is the new year</sentence>
+    <sentence lang="en_US">Time left before new year</sentence>
+    <sentence lang="fr_FR">Combien de temps avant le nouvel an</sentence>
+    <sentence lang="fr_FR">Quand est le nouvel an</sentence>
+    <sentence lang="fr_FR">Temps restant avant le nouvel an</sentence>
+   </triggerSentences>
+   <permissions>
+    <canRunOnPod/>
+   </permissions>
+  </behaviorContent>
+  <behaviorContent path="Final Countdown">
+   <nature>interactive</nature>
+   <permissions/>
+  </behaviorContent>
+ </contents>
+ <services>
+  <service name="NewYearCountdown" autorun="true" execStart="./python newyear-countdown-service.py"/>
+ </services>
+ <executableFiles>
+  <file path="python"/>
+ </executableFiles>
+</package>
