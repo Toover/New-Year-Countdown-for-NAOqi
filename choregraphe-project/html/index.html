@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<style type="text/css">
+center.countdown {
+  right: 50%;
+  bottom: 50%;
+  transform: translate(50%,50%);
+  position: absolute;
+  font-size: 5em;
+}
+</style>
+<title>Time before next year!</title>
+</head>
+<body>
+<center class="countdown" id="countdown">Happy New Year Countdown!</center>
+<script>
+var countdownElement = document.getElementById("countdown");
+
+function tick() {
+  var now = new Date();
+  var nextYear = new Date(now.getFullYear() + 1, 0, 0, 0, 0, 0, 0);
+  var totalMs = nextYear - now;
+  var totalSeconds = Math.floor(totalMs / 1000);
+  var totalMinutes = Math.floor(totalSeconds / 60);
+  var totalHours = Math.floor(totalMinutes / 60);
+  var totalDays = Math.floor(totalHours / 24);
+  if (totalDays >= 363 || totalMs <= 0) {
+    countdownElement.innerHTML = 'Happy New Year!';
+    return;
+  }
+  var ms = totalMs % 1000;
+  var seconds = totalSeconds % 60;
+  var minutes = totalMinutes % 60;
+  var hours = totalHours % 24;
+  if (hours   < 10) {hours   = "0"+hours;}
+  if (minutes < 10) {minutes = "0"+minutes;}
+  if (seconds < 10) {seconds = "0"+seconds;}
+  if (ms < 10) {ms = "00"+ms;}
+  else if (ms < 100) {ms = "0"+ms;}
+  var timeString = "";
+  if (totalDays > 0)
+    timeString = totalDays + " days, ";
+  timeString = timeString + hours+':'+minutes+':'+seconds+':'+ms;
+  countdownElement.innerHTML = timeString
+  setTimeout(tick, 20);
+}
+tick();
+</script>
+</body>
+</html>
