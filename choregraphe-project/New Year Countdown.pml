@@ -8,7 +8,10 @@
     <Dialogs />
     <Resources>
         <File name="newyear-countdown-service" src="newyear-countdown-service.py" />
+        <File name="index" src="html/index.html" />
     </Resources>
     <Topics />
-    <IgnoredPaths />
+    <IgnoredPaths>
+        <Path src="html/index.html~" />
+    </IgnoredPaths>
 </Package>
