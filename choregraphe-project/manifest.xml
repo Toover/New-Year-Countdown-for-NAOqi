@@ -1,9 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<package version="0.0.1" uuid="new-year-countdown">
+<package uuid="new-year-countdown" version="0.0.2">
  <names>
   <name lang="en_US">New Year Countdown</name>
+  <name lang="en_US-x-scrald">New Year Countdown</name>
   <name lang="fr_FR">Compte à Rebours du Nouvel An</name>
+  <name lang="fr_FR-x-scrald">Compte à Rebours du Nouvel An</name>
  </names>
+ <descriptions>
+  <description lang="en_US">This application announces the new year at several intervals, until the final countdown!</description>
+  <description lang="en_US-x-scrald">This application announces the new year at several intervals, until the final countdown!</description>
+  <description lang="fr_FR">Cette application annonce le nouvel an à plusieurs intervalles, jusqu'à faire le décompte final!</description>
+  <description lang="fr_FR-x-scrald">Cette application annonce le nouvel an à plusieurs intervalles, jusqu'à faire le décompte final!</description>
+ </descriptions>
  <supportedLanguages>
   <language>fr_FR</language>
   <language>en_US</language>
@@ -18,7 +26,9 @@
    <nature>interactive</nature>
    <names>
     <name lang="en_US">Time Left before New Year</name>
+    <name lang="en_US-x-scrald">Time Left before New Year</name>
     <name lang="fr_FR">Temps restant avant le nouvel an</name>
+    <name lang="fr_FR-x-scrald">Temps restant avant le nouvel an</name>
    </names>
    <triggerSentences>
     <sentence lang="en_US">How long before next year</sentence>
@@ -26,10 +36,20 @@
     <sentence lang="en_US">How long before the new year</sentence>
     <sentence lang="en_US">When is the new year</sentence>
     <sentence lang="en_US">Time left before new year</sentence>
+    <sentence lang="en_US-x-scrald">How long before next year</sentence>
+    <sentence lang="en_US-x-scrald">When is the next year</sentence>
+    <sentence lang="en_US-x-scrald">How long before the new year</sentence>
+    <sentence lang="en_US-x-scrald">When is the new year</sentence>
+    <sentence lang="en_US-x-scrald">Time left before new year</sentence>
     <sentence lang="fr_FR">Combien de temps avant le nouvel an</sentence>
     <sentence lang="fr_FR">Quand est le nouvel an</sentence>
     <sentence lang="fr_FR">Temps restant avant le nouvel an</sentence>
+    <sentence lang="fr_FR-x-scrald">Combien de temps avant le nouvel an</sentence>
+    <sentence lang="fr_FR-x-scrald">Quand est le nouvel an</sentence>
+    <sentence lang="fr_FR-x-scrald">Temps restant avant le nouvel an</sentence>
    </triggerSentences>
+   <loadingResponses/>
+   <autonomous/>
    <permissions>
     <canRunOnPod/>
    </permissions>
@@ -39,6 +59,11 @@
    <permissions/>
   </behaviorContent>
  </contents>
+ <requirements>
+  <naoqiRequirement minVersion="2.4"/>
+  <robotRequirement model="JULIETTE"/>
+  <robotRequirement model="NAO"/>
+ </requirements>
  <services>
   <service name="NewYearCountdown" autorun="true" execStart="./python newyear-countdown-service.py"/>
  </services>
