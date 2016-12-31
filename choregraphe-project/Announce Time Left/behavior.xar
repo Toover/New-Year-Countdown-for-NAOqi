@@ -38,9 +38,8 @@
         hourWord = strings[2]
         minWord = strings[3]
 
-        #memory = self.session().service('ALMemory')
-        #data = memory.getData('NewYearCountDown')
-        data = '0;0;30'
+        memory = self.session().service('ALMemory')
+        data = memory.getData('NewYearCountDown')
         data = data.split(';')
         days = int(data[0])
         hours = int(data[1])
