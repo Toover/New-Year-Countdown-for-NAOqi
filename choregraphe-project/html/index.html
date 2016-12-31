@@ -8,20 +8,20 @@ center.countdown {
   bottom: 50%;
   transform: translate(50%,50%);
   position: absolute;
-  font-size: 5em;
+  font-size: 7em;
 }
 </style>
 <title>Time before next year!</title>
 </head>
 <body>
-<center class="countdown" id="countdown">Happy New Year Countdown!</center>
+<center class="countdown" id="countdown">New Year Countdown!</center>
 <script>
 var countdownElement = document.getElementById("countdown");
 
 function tick() {
-  var now = new Date();
-  var nextYear = new Date(now.getFullYear() + 1, 0, 0, 0, 0, 0, 0);
-  var totalMs = nextYear - now;
+  var now = new Date()
+  var nextYear = new Date(now.getFullYear() + 1, 0, 1, 0, 0, 0, 0);
+  var totalMs = nextYear.getTime() - now.getTime();
   var totalSeconds = Math.floor(totalMs / 1000);
   var totalMinutes = Math.floor(totalSeconds / 60);
   var totalHours = Math.floor(totalMinutes / 60);
